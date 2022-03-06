@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block:hover {
+  background-color: #ddd;
+  color: black;
+}
+h1 {
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1>Alternative landscapes. How would this place look...</h1>
+
+<button onclick="landscape60()" class="block">60 years ago</button>
+<button onclick="landscapeSea()" class="block">Ancient Seascape</button>
+
+<p id="land60"></p>
+<p id="landSea"></p>
+
+<script>
+function landscape60() {
+  var txt;
+  if (confirm("Rotate to landscape view, then press OK")) {
+    txt = "Thanks!";
+    window.open("landscape60.html");
+  } else {
+    txt = "The following link needs the portrait view, try again";
+  }
+  document.getElementById("land60").innerHTML = txt;
+}
+function landscapeSea() {
+  var txt;
+  if (confirm("Rotate to landscape view, then press OK")) {
+    txt = "Thanks!";
+    window.open("landscapeSea.html");
+  } else {
+    txt = "The following link needs the portrait view, try again";
+  }
+  document.getElementById("landSea").innerHTML = txt;
+}
+</script>
+
+  
+</body>
+</html>
