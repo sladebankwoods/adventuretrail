@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none}
+</style>
+<body>
+
+<div class="container">
+	  <p>Explore the uses, folklore and ecology of the Hawthorn across the seasons!</p>
+</div>
+
+<div class="content" style="max-width:800px">
+  <img class="mySlides" src="haw1.png" style="width:100%">
+  <img class="mySlides" src="blossom.png" style="width:100%">
+  <img class="mySlides" src="teacup.png" style="width:100%">
+  <img class="mySlides" src="maypole.png" style="width:100%">
+  <img class="mySlides" src="dormouse.png" style="width:100%">
+  <img class="mySlides" src="haw2.png" style="width:100%">
+  <img class="mySlides" src="salad.png" style="width:100%">
+  <img class="mySlides" src="heart.png" style="width:100%">
+  <img class="mySlides" src="haw3.png" style="width:100%">
+  <img class="mySlides" src="berries.png" style="width:100%">
+  <img class="mySlides" src="teacup2.png" style="width:100%">
+  <img class="mySlides" src="relax.png" style="width:100%">
+  <img class="mySlides" src="fence.png" style="width:100%">
+  <img class="mySlides" src="haw4.png" style="width:100%">
+  <img class="mySlides" src="jamjar.png" style="width:100%">
+  <img class="mySlides" src="friendship.png" style="width:100%">
+  <img class="mySlides" src="bird.png" style="width:100%">
+	</div>
+
+<div class="center">
+  <div class="section">
+    <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+    <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+  </div>
+  <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+  <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+  <button class="w3-button demo" onclick="currentDiv(3)">3</button>
+  <button class="w3-button demo" onclick="currentDiv(3)">4</button> 
+  <button class="w3-button demo" onclick="currentDiv(3)">5</button> 
+  <button class="w3-button demo" onclick="currentDiv(3)">6</button> 
+  <button class="w3-button demo" onclick="currentDiv(3)">7</button>
+  <button class="w3-button demo" onclick="currentDiv(3)">8</button>
+  <button class="w3-button demo" onclick="currentDiv(3)">9</button>
+  <button class="w3-button demo" onclick="currentDiv(3)">10</button>
+  <button class="w3-button demo" onclick="currentDiv(3)">11</button>
+  <button class="w3-button demo" onclick="currentDiv(3)">12</button>
+  <button class="w3-button demo" onclick="currentDiv(3)">13</button>
+  <button class="w3-button demo" onclick="currentDiv(3)">14</button>
+  <button class="w3-button demo" onclick="currentDiv(3)">15</button>
+  <button class="w3-button demo" onclick="currentDiv(3)">16</button>
+  <button class="w3-button demo" onclick="currentDiv(3)">17</button>
+  
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-red", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-green";
+}
+</script>
+
+</body>
+</html>
